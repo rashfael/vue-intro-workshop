@@ -1,0 +1,104 @@
+extends layouts/presentation
+
+block append head
+	title Vue Intro Workshop
+
+block content
+	section
+		img.no-border(style="border-radius: 50%", src='https://s.gravatar.com/avatar/3d79f7b9ebc106aff59ece0a2d70325c?s=480')
+	section
+		img.no-border(style="max-height: 30vh", src='/img/vue-logo.svg')
+		h2 Vue - Single Page Application Development
+	section
+		h1 SPA
+		h2 Single Page Application
+	section
+		h3 "Traditional" Server Based Pages
+		svg.diagram.traditional(viewBox="0 0 10 10")
+			defs
+				marker#arrow-end(viewBox="0 0 10 10", refX="1", refY="5", markerUnits="strokeWidth", markerWidth="3", markerHeight="3", orient="auto")
+					path(d="M 0 0 L 10 5 L 0 10 z")
+			g(transform="translate(7,.1)").server
+				rect(height="6", width="2")
+				text(x=".2", y=".8") Server
+			g(transform="translate(.1,.1)").browser
+				rect(height="6", width="4")
+				text(x=".2", y=".8") Browser
+			g.fragment(transform="translate(4,.8)").arrow
+				path(d="M .2 0 L 2.75 0")
+				text(x=".3", y="-.15") GET /index.html
+			g.fragment(transform="translate(4,1.25)").arrow
+				path.dotted(d="M 2.85 0 L .35 0")
+				text(x="2.2", y=".35") HTML
+			g.fragment(transform="translate(.1,1.26)").page
+				path(d="M 0 0 L 4 0")
+				text(x=".2", y=".6") page /index.html
+				text.action.fragment(x="1.6", y="1") CLICK &nbsp;&lt; a href="/form.html" &gt;
+			g.fragment(transform="translate(4,2.17)").arrow
+				path(d="M .2 0 L 2.75 0")
+				text(x=".3", y="-.15") GET /form.html
+			g.fragment(transform="translate(4,2.7)").arrow
+				path.dotted(d="M 2.85 0 L .35 0")
+				text(x="2.2", y=".35") HTML
+			g.fragment(transform="translate(.1,2.7)").page
+				path.reload(d="M 0 0 L 4 0")
+				text.reload(x="1.7", y=".1") RELOAD
+				text(x=".2", y=".6") page /form.html
+				text.action.fragment(x="3", y="1") submit form
+			g.fragment(transform="translate(4, 3.63)").arrow
+				path(d="M .2 0 L 2.75 0")
+				text(x=".3", y="-.15") POST /success.html FORMDATA
+			g.fragment(transform="translate(4,4.1)").arrow
+				path.dotted(d="M 2.85 0 L .35 0")
+				text(x="2.2", y=".35") HTML
+			g.fragment(transform="translate(.1,4.1)").page
+				path.reload(d="M 0 0 L 4 0")
+				text.reload(x="1.7", y=".1") RELOAD
+				text(x=".2", y=".6") page /success.html
+		aside.notes
+			ul
+				li Server State, user session
+	section
+		h3 Single Page Application
+		svg.diagram.spa(viewBox="0 0 10 10")
+			defs
+				marker#arrow-end(viewBox="0 0 10 10", refX="1", refY="5", markerUnits="strokeWidth", markerWidth="3", markerHeight="3", orient="auto")
+					path(d="M 0 0 L 10 5 L 0 10 z")
+			g(transform="translate(7,.1)").server
+				rect(height="6", width="2")
+				text(x=".2", y=".8") Server
+			g(transform="translate(.1,.1)").browser
+				rect(height="6", width="4")
+				text(x=".2", y=".8") Browser
+			g.fragment(transform="translate(4,.8)").arrow
+				path(d="M .2 0 L 2.75 0")
+				text(x=".3", y="-.15") GET /
+			g.fragment(transform="translate(4,1.25)").arrow
+				path.dotted(d="M 2.85 0 L .35 0")
+				text(x="2.2", y=".35") HTML
+			g.fragment(transform="translate(.1,1.26)").page
+				path(d="M 0 0 L 4 0")
+				text(x=".2", y=".6") view /
+			g.fragment(transform="translate(4,1.9)").arrow
+				path(d="M .2 0 L 2.75 0")
+				text(x=".3", y="-.15") GET /api/user-data
+			g.fragment(transform="translate(4,2.2)").arrow
+				path.dotted(d="M 2.85 0 L .35 0")
+				text(x="2.2", y=".35") JSON
+			text.action.fragment(x="1.7", y="2.6") CLICK &nbsp;&lt; a href="/form" &gt;
+			g.fragment(transform="translate(.1,2.9)").page
+				path(d="M 0 0 L 4 0")
+				text(x=".2", y=".6") view /form
+				text.action.fragment(x="3", y="1") submit form
+			g.fragment(transform="translate(4, 3.83)").arrow
+				path(d="M .2 0 L 2.75 0")
+				text(x=".3", y="-.15") ASYNC POST /api/action JSON
+			g.fragment(transform="translate(4,4.1)").arrow
+				path.dotted(d="M 2.85 0 L .35 0")
+				text(x="2.2", y=".35") JSON
+			g.fragment(transform="translate(.1,4.1)").page
+				path.reload(d="M 0 0 L 4 0")
+				text(x=".2", y=".6") view /success
+		aside.notes
+			ul
+				li no hard reloads

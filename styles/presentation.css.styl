@@ -1,0 +1,119 @@
+// .backgrounds
+// 	background url("/img/background.png") repeat
+// 	color #ccc
+// 	border-top 6px solid #099
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6
+	text-transform initial
+
+.progress span
+	background #099
+	background none repeat scroll 0% 0% #099
+
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled
+	border-right-color #099
+
+
+img.no-border
+	border:none !important
+	background none !important
+	box-shadow none !important
+
+img.half-height
+	max-height 50vh
+
+img.long-branch
+	max-width 200vw
+	max-height 200vh
+	position absolute
+	left -50vw
+
+.reveal pre
+	width 110% !important
+
+pre .comment
+	float right
+	width 26em
+
+// .cheat-sheet-branching, .cheat-sheet-remote, .stash-section
+// 	pre .comment
+// 		width 25em
+
+.reveal .stage
+	width 4.5em
+	height 14em
+	padding 1em 0.3em
+	margin 0 1em
+	display inline-block
+	border-radius 3px
+	vertical-align top
+
+	h5
+		color #000
+
+.working
+	background-color #F23A0D
+
+.repo
+	background-color #0DAEF2
+
+.index
+	background-color #FFCE0A
+
+.reveal .stash
+	background-color #AAA
+	width 3em
+
+.list
+	text-align left
+
+.projects
+	img
+		padding: 16px
+		width: 7vw
+		border:none !important
+		background none !important
+		box-shadow none !important
+		vertical-align: middle
+
+svg.diagram
+	rect
+		fill: none
+		stroke: #eee
+		stroke-width: 0.1px
+	path
+		fill: none
+		stroke: #eee
+	text
+		fill: #eee
+		text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2)
+		font-size: .7px
+		font-family: "League Gothic", Impact, sans-serif
+	.fragment.visible:not(.current-fragment)
+		transition: opacity .4s ease
+		opacity: .7 !important
+	.page
+		path
+			stroke-width: 0.1px
+			&.reload
+				stroke-dasharray: 1.6 .8
+		text
+			font-size: .4px
+			&.reload
+				font-size: .3px
+	text.action
+		font-size: .25px
+	&.spa .page
+		path
+			stroke-dasharray: .2 .2
+	.arrow
+		> path
+			stroke-width: 0.05px
+		& > path
+			marker-end: url(#arrow-end)
+			&.dotted
+				stroke-dasharray: .1 .1
+		text
+			font-size: .3px
+	#arrow-end path
+		fill: #eee

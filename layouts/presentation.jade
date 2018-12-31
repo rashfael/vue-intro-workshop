@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+	head
+
+		meta(charset='utf-8')
+		block head
+		meta(name='description', content='A framework for easily creating beautiful presentations using HTML')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		//- link#theme(rel='stylesheet', href='reveal/css/theme/default.css')
+		// For syntax highlighting
+		link(href='/vendor/reveal/css/reveal.css', rel='stylesheet')
+		link(href='/vendor/reveal/css/theme/league.css', rel='stylesheet', id='theme')
+		link(href='/vendor/reveal/lib/css/zenburn.css', rel='stylesheet')
+		// If the query includes 'print-pdf', use the PDF print sheet
+		script.
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/vendor/reveal/css/print/pdf.css' : 'vendor/reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		
+		link(href='/styles/presentation.css', rel='stylesheet')
+	body
+		.reveal
+			.slides
+				block content
+
+		script(src='/vendor/reveal/lib/js/head.min.js')
+		script(src='/vendor/reveal/js/reveal.js')
+		script(src='/vendor/jquery.min.js')
+		script.
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			transition: 'slide',
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+			{ src: '/vendor/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '/vendor/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '/vendor/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '/vendor/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad();  } },
+			{ src: '/vendor/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '/vendor/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+			});	
