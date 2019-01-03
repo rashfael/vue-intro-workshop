@@ -1,0 +1,72 @@
+doctype html
+html(lang='en')
+	head
+
+		meta(charset='utf-8')
+		block head
+		meta(name='description', content='A framework for easily creating beautiful presentations using HTML')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		//- link(href='/vendor/reveal/css/reveal.css', rel='stylesheet')
+		//- link(href='/vendor/reveal/lib/css/zenburn.css', rel='stylesheet')
+		link(rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css")
+		link(href='/styles/cheatsheet.css', rel='stylesheet')
+	body
+		:markdown
+			### Add vue to your project
+			```html
+			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+			```
+			### Conditionals
+			```html
+			<div v-if="myVariable === 3">three!</div>
+			```
+			### Loops
+			```html
+			<div v-for="item in items">{{ item }}</div>
+			```
+			
+			### Event Handling
+			```html
+			<button @click="myFunction">Click me!</button>
+			```
+			
+			```js
+			…,
+			methods: {
+				myFunction (event) {
+					…
+				}
+			}
+			```
+			
+			### reactive value + input event
+			```html
+			<input type="text" :value="myValue" @input="myValue = $event.target.value"/>
+			<input type="text" v-model="myValue"/>
+			```
+			
+			### define components
+			```js
+			const MyComponent = {
+			  template: `
+			  `,
+			  props: {},
+			  data() {
+			    return {}
+			  },
+			  methods: {}
+			}
+			```
+			
+			### use own component
+			```js
+			{
+				…,
+				components: { MyComponent }
+			}
+			```
+		script(src="/vendor/reveal/plugin/highlight/highlight.js")
+		script
+			| hljs.initHighlightingOnLoad()
