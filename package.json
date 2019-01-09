@@ -22,7 +22,7 @@
   "scripts": {
     "start": "roots watch",
     "build": "roots compile",
-    "deploy": "npm run build -s && gh-pages -d dist"
+    "deploy": "npm run build -s && gh-pages -d public"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"
