@@ -1,0 +1,130 @@
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: initial;
+}
+.progress span {
+  background: #099;
+  background: none repeat scroll 0% 0% #099;
+}
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #099;
+}
+img.no-border {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+img.half-height {
+  max-height: 50vh;
+}
+img.long-branch {
+  max-width: 200vw;
+  max-height: 200vh;
+  position: absolute;
+  left: -50vw;
+}
+.reveal pre {
+  width: 110% !important;
+}
+pre .comment {
+  float: right;
+  width: 26em;
+}
+.reveal .stage {
+  width: 4.5em;
+  height: 14em;
+  padding: 1em 0.3em;
+  margin: 0 1em;
+  display: inline-block;
+  border-radius: 3px;
+  vertical-align: top;
+}
+.reveal .stage h5 {
+  color: #000;
+}
+.working {
+  background-color: #f23a0d;
+}
+.repo {
+  background-color: #0daef2;
+}
+.index {
+  background-color: #ffce0a;
+}
+.reveal .stash {
+  background-color: #aaa;
+  width: 3em;
+}
+.list {
+  text-align: left;
+}
+.projects img {
+  padding: 16px;
+  width: 7vw;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  vertical-align: middle;
+}
+svg.diagram rect {
+  fill: none;
+  stroke: #586e75;
+  stroke-width: 0.1px;
+}
+svg.diagram path {
+  fill: none;
+  stroke: #586e75;
+}
+svg.diagram text {
+  fill: #586e75;
+  font-size: 0.7px;
+  font-family: "League Gothic", Impact, sans-serif;
+}
+svg.diagram .fragment.visible:not(.current-fragment) {
+  transition: opacity 0.4s ease;
+  opacity: 0.7;
+}
+svg.diagram .page path {
+  stroke-width: 0.1px;
+}
+svg.diagram .page path.reload {
+  stroke-dasharray: 1.6 0.8;
+}
+svg.diagram .page text {
+  font-size: 0.4px;
+}
+svg.diagram .page text.reload {
+  font-size: 0.3px;
+}
+svg.diagram text.action {
+  font-size: 0.25px;
+}
+svg.diagram.spa .page path {
+  stroke-dasharray: 0.2 0.2;
+}
+svg.diagram .arrow > path {
+  stroke-width: 0.05px;
+}
+svg.diagram .arrow > path {
+  marker-end: url("#arrow-end");
+}
+svg.diagram .arrow > path.dotted {
+  stroke-dasharray: 0.1 0.1;
+}
+svg.diagram .arrow text {
+  font-size: 0.3px;
+}
+svg.diagram #arrow-end path {
+  fill: #eee;
+}
+table.list td {
+  border-bottom: none;
+}
+table.list td:first-child {
+  text-align: right;
+}

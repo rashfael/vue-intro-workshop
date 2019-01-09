@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="description" content="A framework for easily creating beautiful presentations using HTML"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css"><link href="/styles/cheatsheet.css" rel="stylesheet"></head><body><h3 id="add-vue-to-your-project">Add vue to your project</h3>
+<pre><code class="lang-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="conditionals">Conditionals</h3>
+<pre><code class="lang-html">&lt;div v-if=&quot;myVariable === 3&quot;&gt;three!&lt;/div&gt;
+</code></pre>
+<h3 id="loops">Loops</h3>
+<pre><code class="lang-html">&lt;div v-for=&quot;item in items&quot;&gt;{{ item }}&lt;/div&gt;
+</code></pre>
+<h3 id="event-handling">Event Handling</h3>
+<pre><code class="lang-html">&lt;button @click=&quot;myFunction&quot;&gt;Click me!&lt;/button&gt;
+</code></pre>
+<pre><code class="lang-js">…,
+methods: {
+    myFunction (event) {
+        …
+    }
+}
+</code></pre>
+<h3 id="reactive-value-input-event">reactive value + input event</h3>
+<pre><code class="lang-html">&lt;input type=&quot;text&quot; :value=&quot;myValue&quot; @input=&quot;myValue = $event.target.value&quot;/&gt;
+&lt;input type=&quot;text&quot; v-model=&quot;myValue&quot;/&gt;
+</code></pre>
+<h3 id="define-components">define components</h3>
+<pre><code class="lang-js">const MyComponent = {
+  template: `
+  `,
+  props: {},
+  data() {
+    return {}
+  },
+  methods: {}
+}
+</code></pre>
+<h3 id="use-own-component">use own component</h3>
+<pre><code class="lang-js">{
+    …,
+    components: { MyComponent }
+}
+</code></pre>
+<script src="/vendor/reveal/plugin/highlight/highlight.js"></script><script>hljs.initHighlightingOnLoad()</script></body></html>
